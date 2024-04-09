@@ -3,6 +3,7 @@
 - ftp : File Transfer Protocol
 - http : Hypertext Markup Transfer Protocol
 - smtp : Simple mail Transfer Protocol
+
 - [파일질라](https://filezilla-project.org/)
 - [무료웹호스팅](https://www.dothome.co.kr/)
 
@@ -29,6 +30,7 @@
 - 배경에 이미지 넣기
   : 그림깔고 내용 위치 잡기
   : 그림깔고 내용 위치잡기
+
   ```css
   .main-top-banner a {
     display: block;
@@ -40,12 +42,16 @@
     background-position: center;
   }
   ```
+
   :축약형
+
   ```css
   background: url("../images//br.png") no-repeat center;
   background-size: contain;
   ```
+
   - 좋아요
+
   ```css
   .main-top-banner a {
     display: block;
@@ -55,3 +61,22 @@
     background-size: cover;
   }
   ```
+
+- flex 를 활용시 참고 사항
+  : 기본적으로 flex를 적용하면 줄내림은 없다.
+
+```css
+.box {
+  display: flex;
+  flex-wrap: nowrap;
+}
+```
+
+: 필요시 100% 넘는 item들이 있을 때 줄내림 하려면
+
+```css
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+```
