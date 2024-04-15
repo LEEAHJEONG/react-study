@@ -1,0 +1,64 @@
+# CSS 최적화
+
+# js syntax 1장
+
+```txt
+1. Syntax (구문) : 약속된 문법
+2. Interpreter (번역) : 갤럭시 AI/웹브라우저 
+3. 프로그래밍은 요구사항을 분석하고 (개인별로 작성 : 의사코드)
+Syntax 를 이용해서
+적절한 자료구조와 적합한 함수를 활용하고
+흐름을 제어하여 요구사항을 만족시킨다.
+```
+
+# js Syntax 코드 위치
+
+1. inline 방식
+
+```html
+<div class="wrap" onclick="alert('안녕');"></div>
+```
+
+2. 태그 방식
+
+```html
+<script>
+  alert("반가워");
+</script>
+```
+
+3. 외부파일 방식
+
+   : 내부 js 코드는 무시되기 때문에 2번의 형식으로 나타내야 한다.
+
+1.
+
+```html
+<script src="./js/script.js">
+  alert("반가워"); // 실행안됨
+</script>
+```
+
+2.
+
+```html
+<script src="./js/script.js"></script>
+```
+
+# Swiper Slide 적용해 보기
+
+- **Slide 를 직접 코딩하지 마세요.**
+- 사용법을 배운다고 이해하자.
+- [Swiper](https://swiperjs.com/) : 권장
+- [Slick](https://swiperjs.com/) : 사용 프로그램에 따라 수정해야 할 부분이 있음
+- [BxSlider](https://bxslider.com/) : BxSlider 는 사용하지 않는게 좋다.
+
+## 1. Swiper 슬라이드 적용시 주의 사항
+
+- html 로드 완료 및 이미지 로드 완료 후 실행 권장.
+
+```js
+window.addEventListener("load", function () {
+  // 실제 슬라이드 코드 배치하자.
+});
+```
