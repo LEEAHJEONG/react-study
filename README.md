@@ -428,3 +428,211 @@ window.addEventListener("load", function () {
   width: 20px !important;
 }
 ```
+
+# js 4장
+
+- var 변수명 = 변수값;
+- let 변수명 = 변수값;
+- const 변수명 = 변수값;
+
+```txt
+호이스팅(hoisting) 은 변수, 함수를 선언하지 않았는데도 사용할 수 있다.
+```
+
+# css 의 opacity 와 position 의 이해.
+
+- opacity 는 DOM의 내용까지도 투명도가 적용된다.
+- position
+  : position 중에 absolute 로 픽셀 위치 설정할 경우 주의점
+  : 반드시 기준이 될 position 코드가 바깥 영역에도 있어야 합니다.
+  : position 중에 fixed는 웹브라우저를 기준으로 배치
+  : fixed는 반드시 left, top, right,k bottom을 주자
+  : fixed는 보통 z-index를 준다.
+  : fixed는 높이 반영이 안된다. (레이아웃 배치 문제)
+
+```css
+대상 {
+  position: relative;
+}
+대상 {
+  position: absolute;
+}
+대상 {
+  position: fixed;
+}
+```
+
+: absolute를 사용하려면 relative나 fixed로 기준점을 잡아야하지만
+: relative, fixed는 단독사용가능하다.
+
+- 주의사항
+
+```css
+.box-wrap {
+  // 코드 영역 기준 설정해주기
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  height: 300px;
+  background: orange;
+}
+.box {
+  position: absolute;
+  right: 80px;
+  bottom: 20px;
+
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+```
+
+# js 윈도우 스크롤의 위치를 알아내기
+
+```js
+window.addEventLinstenr("scoll", function () {
+  // 하고 싶은 일
+});
+```
+
+```js
+window.addEventLinstenr("scoll", function () {
+  // 하고 싶은 일
+});
+```
+
+# js 로 css 의 클래스 동적으로 활용하기
+
+```js
+// DOM 찾아서 변수로 레퍼런스 하기
+const tags = document.querySelector(".클래스명");
+// DOM 을 이용해서 선택한 곳에 적용된 css 클래스 목록 추가
+tags.classList.add("클래스명");
+// DOM 을 이용해서 선택한 곳에 적용된 css 클래스 목록 제거
+tags.classList.remove("클래스명");
+// DOM 을 이용해서 선택한 곳에 적용된 css 클래스 목록 추가 / 제거
+tags.classList.toggle("클래스명");
+// DOM 을 이용해서 선택한 곳에 적용된 css 클래스 목록 포함여부
+tags.classList.contain("클래스명");
+```
+
+# js 의 함수란? 1.
+
+- 동일한 코드가 2번 이상 반복되면 함수를 만들려고 노력하자.
+- 반복이 되지 않아도 하나의 기능이 너무 복잡하면 함수를 만들려고 노력하장.
+- 복잡하지는 않는데 코드가 너무 길어지면 함수로 묶어주려고 노력하장.
+- 실행의 결과가 그때그때마다 다른 경우에도 함수를 만들자.
+
+```js
+// 함수선언(함수만들기)
+function 적절한동사() {
+  // 하고싶은일 작성...
+}
+// 함수호출(함수사용하기)
+적절한동사();
+// 예시 (함수 체이닝)
+fetch().then().then().catch();
+```
+
+- 함수는 무조건 1개의 값을 리턴하도록 규정되어 있다.
+- 리턴이란 함수 실행 후 값을 돌려주는 것을 말한다.
+
+```js
+function 함수명() {
+  // return 을 작성안해도 알아서 return을 실행해줌
+  // return undefined;
+}
+함수명();
+```
+
+# JS 5장
+
+```txt
+코딩에서 값이라고 할 수 있는 것은
+  변수에 할당(보관한)된 결과를 말한다.
+
+  변수란? 컴퓨터 공간에 이름을 붙여둔 방 한개
+
+  표현식이
+
+  평가(식을 해석해서 값을 생성하고 참조하는 것)된
+   결과를 말한다.
+
+
+   리터럴 이란?
+   사람이 이해할 수 있는 문자 또는 약속된 기호를
+   사용해서     값   을    생성하는 표기법
+
+   리터럴은 값을 평가해서 코드에 활용하기 위한 문법
+
+
+  "function"
+  var function
+
+  function gg(){}
+
+  표현식 expressioin
+  : 리터럴 값으로 평가가 되면 OK!
+     5  숫자 리터럴 값으로 평가가 되면 OK!
+     "안녕" 문자열 리터럴 값으로 평가가 되면 OK!
+
+     var num = 5;
+     var num:number = 5;
+
+
+  문(statement) :  프로그램을 구성하는 기본단위/최소 실행단위
+
+  {}
+
+
+  var foo = x = 100
+```
+
+# js 의 함수란 ? 2번
+
+- 동일한 코드가 2번 이상 반복되면 함수를 만들려고 노력하자.
+- 반복은 되지 않더라도 하나의 기능이 너무 복잡하면 함수를 만들려고 노력하자.
+- 복잡하지는 않는데 코드가 너무 길어지면 함수로 묶어주려고 노력하자.
+- 실행의 결과가 그때, 그때 다른 경우에도 함수를 만들자.
+
+- 함수 정의 문
+
+```js
+function 함수이름() {
+  // 할일
+}
+```
+
+- 함수 실행(call) 문
+
+```js
+함수이름();
+```
+
+# js의 함수의 매개변수란? 3번
+
+- 초기 기능 즉, 함수를 정의하기 전에 기능 상 자주 변하는 데이터를 고민한다.
+- 기능은 스크롤시 특정 위치보다 커지면 css 추가하기
+- 이전 코드는 좋지 않은 코드라고 생각이든다.
+- 함수는 스스로 지역(Local) 영역(Scope) 에서 처리되는 것이 좋다.
+- 위의 처리라는 말은 변수를 찾거나, 잘못된 값이 전달되어서 오류가 나는 것을 말한다.
+
+```js
+// 홍길동에서 줄 함수
+const a = 5;
+const b = 6;
+
+function sum() {
+  return a + b;
+}
+sum();
+```
+
+- 매개변수(parameter)
+
+```js
+const 변수명 = 값;
+function 함수명(매개변수) {
+  // 할 일..
+}
+```
