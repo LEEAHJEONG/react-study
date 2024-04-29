@@ -9,10 +9,10 @@
 ### 1.1. 리액트 및 퍼블리싱 프로젝트 생성
 
 - 개발환경 구성
- : https://jolly-okapi-f67.notion.site/c9ac2c8354674479b29eb3a1d4a77330?pvs=4
- - vscode 필수 설치해주기
+  : https://jolly-okapi-f67.notion.site/c9ac2c8354674479b29eb3a1d4a77330?pvs=4
+- vscode 필수 설치해주기
 - git 초기세팅
- : https://jolly-okapi-f67.notion.site/Git-88e834fe234f4965828e32e0111f6625
+  : https://jolly-okapi-f67.notion.site/Git-88e834fe234f4965828e32e0111f6625
 
 - VSCode 를 실행한다.
 - PC에 만든 폴더를 드래그 해서 등록한다.
@@ -243,3 +243,4 @@
 ### 3.7. 브랜치 목록보기
 
 - `git branch` 엔터
+-
